@@ -12,5 +12,11 @@ dist-ssr
 __unconfig*
 todos.json
 
+# Test artifacts
+coverage
+playwright-report
+test-results
+/e2e/.auth
+
 # Local Netlify folder
 .netlify
