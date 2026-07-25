@@ -1,5 +1,35 @@
 
 @import "tailwindcss";
+@import "@fontsource/lora/400.css";
+@import "@fontsource/lora/700.css";
+
+@font-face {
+  font-family: "Moon";
+  src: url("./fonts/MoonLight.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Moon";
+  src: url("./fonts/MoonBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --main-blue: #15616D;
+  --off-white: #E9F1F7;
+  --raisin-black: #342E37;
+  --font-moon: "Moon", sans-serif;
+  --font-lora: "Lora", serif;
+
+  --color-primary: var(--main-blue);
+  --color-secondary: var(--raisin-black);
+  --color-accent: var(--off-white);
+}
 
 * {
   box-sizing: border-box;
@@ -13,5 +43,7 @@ body,
 
 body {
   margin: 0;
+  font-family: var(--font-lora);
+  color: var(--raisin-black);
+  background-color: var(--off-white);
 }
-
