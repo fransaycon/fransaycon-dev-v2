@@ -2,6 +2,8 @@
 @import "tailwindcss";
 @import "@fontsource/lora/400.css";
 @import "@fontsource/lora/700.css";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/700.css";
 
 @font-face {
   font-family: "Moon";
@@ -25,6 +27,7 @@
   --raisin-black: #342E37;
   --font-moon: "Moon", sans-serif;
   --font-lora: "Lora", serif;
+  --font-space: "Space Grotesk", sans-serif;
 
   --color-primary: var(--main-blue);
   --color-secondary: var(--raisin-black);

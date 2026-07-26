@@ -72,7 +72,7 @@ const waves = [
 		period: 1280,
 		humpsPerPeriod: 2,
 		duration: 9,
-		opacity: 0.5,
+		opacity: 0.6,
 		seed: 8675309,
 	},
 	{
@@ -81,7 +81,7 @@ const waves = [
 		period: 960,
 		humpsPerPeriod: 2,
 		duration: 7,
-		opacity: 0.8,
+		opacity: 1,
 		seed: 42,
 	},
 ] as const;
