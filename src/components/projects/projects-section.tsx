@@ -1,7 +1,7 @@
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
 import { useState } from "react";
-import { Container } from "#/components/container";
-import { ProjectModal } from "#/components/project-modal";
+import { ProjectModal } from "#/components/projects/project-modal";
+import { Container } from "#/components/ui/container";
 import { type Project, projects } from "#/data/projects";
 
 const INITIAL_COUNT = 6;

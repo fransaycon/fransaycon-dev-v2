@@ -1,8 +1,8 @@
 import { CheckCircle2, Loader2, Send } from "lucide-react";
 import { type FormEvent, useState } from "react";
-import { Container } from "#/components/container";
-import { TrustedBySection } from "#/components/trusted-by-section";
-import { ZigzagDivider } from "#/components/zigzag-divider";
+import { TrustedBySection } from "#/components/contact/trusted-by-section";
+import { ZigzagDivider } from "#/components/contact/zigzag-divider";
+import { Container } from "#/components/ui/container";
 import { env } from "#/env";
 
 type FormStatus = "idle" | "loading" | "success" | "error";

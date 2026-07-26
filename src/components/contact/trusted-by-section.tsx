@@ -1,4 +1,4 @@
-import { Container } from "#/components/container";
+import { Container } from "#/components/ui/container";
 import freelancerLogo from "#/work-logos/freelancer.webp";
 import hpEnterpriseLogo from "#/work-logos/hpenterprise.svg";
 import phitopolisLogo from "#/work-logos/phitopolis.webp";
@@ -7,17 +7,16 @@ import telusLogo from "#/work-logos/telus.png";
 import volturaLogo from "#/work-logos/voltura.webp";
 
 const logos = [
-	// max-h tuned per logo's aspect ratio / internal padding for optical balance.
-	{ src: freelancerLogo, alt: "Freelancer.com", className: "max-h-7" }, // 500x122, wide
+	{ src: freelancerLogo, alt: "Freelancer.com", className: "max-h-7" },
 	{
 		src: hpEnterpriseLogo,
 		alt: "Hewlett Packard Enterprise",
 		className: "max-h-12",
-	}, // 530x221
-	{ src: phitopolisLogo, alt: "Phitopolis", className: "max-h-8" }, // 10000x2049, very wide
-	{ src: startconLogo, alt: "StartCon", className: "max-h-7" }, // 193x43, wide
-	{ src: telusLogo, alt: "TELUS International", className: "max-h-16" }, // 3840x2160, padded box
-	{ src: volturaLogo, alt: "Voltura Pty Ltd", className: "max-h-14" }, // 200x200, square
+	},
+	{ src: phitopolisLogo, alt: "Phitopolis", className: "max-h-8" },
+	{ src: startconLogo, alt: "StartCon", className: "max-h-7" },
+	{ src: telusLogo, alt: "TELUS International", className: "max-h-16" },
+	{ src: volturaLogo, alt: "Voltura Pty Ltd", className: "max-h-14" },
 ] as const;
 
 export function TrustedBySection() {
