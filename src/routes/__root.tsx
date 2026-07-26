@@ -1,8 +1,11 @@
+import loraNormal from "@fontsource/lora/files/lora-latin-400-normal.woff2?url";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
 import { env } from "../env";
+import moonBold from "../fonts/MoonBold.woff2?url";
+import moonLight from "../fonts/MoonLight.woff2?url";
 import appCss from "../styles.css?url";
 
 const SITE_URL = env.VITE_SITE_URL ?? "https://fransaycon.dev";
@@ -37,6 +40,27 @@ export const Route = createRootRoute({
 			{ name: "twitter:image", content: SOCIAL_IMAGE },
 		],
 		links: [
+			{
+				rel: "preload",
+				as: "font",
+				type: "font/woff2",
+				href: moonLight,
+				crossOrigin: "anonymous",
+			},
+			{
+				rel: "preload",
+				as: "font",
+				type: "font/woff2",
+				href: moonBold,
+				crossOrigin: "anonymous",
+			},
+			{
+				rel: "preload",
+				as: "font",
+				type: "font/woff2",
+				href: loraNormal,
+				crossOrigin: "anonymous",
+			},
 			{ rel: "stylesheet", href: appCss },
 			{ rel: "canonical", href: SITE_URL },
 			{ rel: "manifest", href: "/site.webmanifest" },
