@@ -13,6 +13,7 @@ import termsPreview from "../project-files/terms.webp";
 import viperbytesPreview from "../project-files/viperbytes.webp";
 import wear2earnPreview from "../project-files/wear2earn.webp";
 import wftbPreview from "../project-files/wftb.webp";
+import { lqip } from "./lqip.generated";
 
 export type TechCategory = "frontend" | "backend" | "infra" | "language";
 
@@ -28,6 +29,8 @@ export type Project = {
 	website?: string;
 	/** Imported preview image URL. */
 	image?: string;
+	/** Base64 blur-up placeholder shown while the image loads. */
+	blur?: string;
 	/** Tailwind gradient classes used as a fallback preview tile. */
 	preview: string;
 	productContext: string;
@@ -57,6 +60,7 @@ export const projects: Project[] = [
 		name: "Terms",
 		website: "https://terms.com.au",
 		image: termsPreview,
+		blur: lqip.terms,
 		preview: "from-sky-500 to-indigo-600",
 		productContext:
 			"A private credit origination platform that streamlines borrower onboarding, credit assessment, and deal execution for private lenders.",
@@ -85,6 +89,7 @@ export const projects: Project[] = [
 		name: "Purchased",
 		website: "https://purchased.com.au",
 		image: purchasedPreview,
+		blur: lqip.purchased,
 		preview: "from-emerald-500 to-teal-600",
 		productContext:
 			"A property acquisition platform that streamlines the buyer journey from onboarding and compliance through property acquisition for Australian buyers' agencies.",
@@ -113,6 +118,7 @@ export const projects: Project[] = [
 		name: "Longina Phillips",
 		website: "https://shop.longinaphillips.com",
 		image: longinaPreview,
+		blur: lqip.longina,
 		preview: "from-amber-500 to-orange-600",
 		productContext:
 			"A digital design marketplace where brands and businesses can securely purchase and download premium fashion and textile design assets from Longina Phillips.",
@@ -142,6 +148,7 @@ export const projects: Project[] = [
 		name: "New Dawn",
 		website: "https://newdawn.xyz",
 		image: newdawnPreview,
+		blur: lqip.newdawn,
 		preview: "from-violet-500 to-purple-600",
 		productContext:
 			"A Web3 collectibles marketplace where users can discover, purchase, and manage digital collectibles through both traditional payments and blockchain transactions.",
@@ -176,6 +183,7 @@ export const projects: Project[] = [
 		name: "Psychedelics Anonymous",
 		website: "https://psychedelicsanonymous.xyz",
 		image: psychedelicsPreview,
+		blur: lqip.psychedelics,
 		preview: "from-fuchsia-500 to-purple-600",
 		productContext:
 			"The official platform for the Psychedelics Anonymous NFT ecosystem, providing collection information, minting experiences, and community engagement across multiple NFT collections.",
@@ -208,6 +216,7 @@ export const projects: Project[] = [
 		name: "Work For The Best",
 		website: "https://workforthebest.com.au",
 		image: wftbPreview,
+		blur: lqip.wftb,
 		preview: "from-cyan-500 to-blue-600",
 		productContext:
 			"A curated job discovery platform that connects professionals with handpicked companies and delivers personalized job notifications based on their preferences.",
@@ -233,6 +242,7 @@ export const projects: Project[] = [
 		id: "pa-coaching",
 		name: "PA Coaching",
 		image: coachingPreview,
+		blur: lqip.coaching,
 		preview: "from-rose-500 to-pink-600",
 		productContext:
 			"A community coaching platform that connects members with mentors through one-on-one coaching sessions, wellness seminars, and educational programs focused on blockchain and other community-driven skills.",
@@ -258,6 +268,7 @@ export const projects: Project[] = [
 		id: "heath-williams",
 		name: "Heath Williams",
 		image: heathPreview,
+		blur: lqip.heath,
 		preview: "from-slate-500 to-gray-700",
 		productContext:
 			"A real estate marketing website that showcases property listings with search and filtering capabilities synchronized with the agency's inventory.",
@@ -284,6 +295,7 @@ export const projects: Project[] = [
 		name: "PsyPay",
 		website: "psypay.xyz",
 		image: psypayPreview,
+		blur: lqip.psypay,
 		preview: "from-indigo-500 to-violet-600",
 		productContext:
 			"A community rewards platform that enables members to earn, manage, and spend reward credits across the Psychedelics Anonymous ecosystem.",
@@ -314,6 +326,7 @@ export const projects: Project[] = [
 		name: "EZU",
 		website: "https://ezu.xyz",
 		image: ezuPreview,
+		blur: lqip.ezu,
 		preview: "from-teal-500 to-emerald-600",
 		productContext:
 			"The official platform for the EZU NFT ecosystem, providing collection information and minting experiences for its Solana-based NFT collections.",
@@ -343,6 +356,7 @@ export const projects: Project[] = [
 		name: "ViperBytes",
 		website: "https://viperbytes.xyz",
 		image: viperbytesPreview,
+		blur: lqip.viperbytes,
 		preview: "from-lime-500 to-green-600",
 		productContext:
 			"The official platform for the ViperBytes NFT ecosystem, providing collection information and minting experiences for its Ethereum-based NFT collections.",
@@ -368,6 +382,7 @@ export const projects: Project[] = [
 		id: "wear-2-earn",
 		name: "Wear 2 Earn",
 		image: wear2earnPreview,
+		blur: lqip.wear2earn,
 		preview: "from-orange-500 to-red-600",
 		productContext:
 			"A backend platform powering the Wear 2 Earn ecosystem, enabling mobile applications to manage royalty rewards, NFC-enabled products, and community credit transactions.",
@@ -391,6 +406,7 @@ export const projects: Project[] = [
 		id: "mycyberon",
 		name: "MyCyberOn",
 		image: mycyberonPreview,
+		blur: lqip.mycyberon,
 		preview: "from-blue-500 to-indigo-600",
 		productContext:
 			"A cybersecurity analytics platform that aggregates security assessment data into actionable dashboards and reports for organizations to monitor their security posture.",
@@ -417,6 +433,7 @@ export const projects: Project[] = [
 		id: "upcm-yearbook-2021",
 		name: "UPCM Yearbook 2021",
 		image: salimbayPreview,
+		blur: lqip.salimbay,
 		preview: "from-pink-500 to-rose-600",
 		productContext:
 			"A digital yearbook website showcasing the graduating class of the University of the Philippines College of Medicine 2021, featuring graduate profiles, photographs, and testimonials.",
@@ -439,6 +456,7 @@ export const projects: Project[] = [
 		id: "startcon",
 		name: "StartCon Mobile App",
 		image: startconPreview,
+		blur: lqip.startcon,
 		preview: "from-amber-500 to-yellow-600",
 		productContext:
 			"A mobile companion application for StartCon, enabling conference attendees to browse event information, schedules, speakers, and conference content.",

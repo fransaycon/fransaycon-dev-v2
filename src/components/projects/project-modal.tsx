@@ -2,6 +2,7 @@ import { ExternalLink, X } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import { BlurImage } from "#/components/ui/blur-image";
 import {
 	type Project,
 	techCategoryLabels,
@@ -61,10 +62,11 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 					className="h-40 shrink-0 overflow-hidden"
 				>
 					{project.image ? (
-						<img
+						<BlurImage
 							src={project.image}
+							blur={project.blur}
 							alt={`${project.name} preview`}
-							className="h-full w-full object-cover"
+							className="h-full w-full"
 						/>
 					) : (
 						<div

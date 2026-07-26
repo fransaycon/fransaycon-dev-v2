@@ -1,6 +1,8 @@
+import { Eye } from "lucide-react";
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
 import { useState } from "react";
 import { ProjectModal } from "#/components/projects/project-modal";
+import { BlurImage } from "#/components/ui/blur-image";
 import { Container } from "#/components/ui/container";
 import { type Project, projects } from "#/data/projects";
 
@@ -36,10 +38,11 @@ export function ProjectsSection() {
 									className="h-40 overflow-hidden"
 								>
 									{project.image ? (
-										<img
+										<BlurImage
 											src={project.image}
+											blur={project.blur}
 											alt={`${project.name} preview`}
-											className="h-full w-full object-cover"
+											className="h-full w-full"
 										/>
 									) : (
 										<div
@@ -64,8 +67,12 @@ export function ProjectsSection() {
 							<button
 								type="button"
 								onClick={() => setShowAll(true)}
-								className="rounded-full font-lora border border-primary px-6 py-2.5 font-medium text-primary transition-colors hover:bg-primary hover:text-accent"
+								className="group inline-flex items-center gap-2 rounded-full border border-primary px-6 py-2.5 font-moon font-light uppercase tracking-wider text-primary transition-colors duration-300 hover:bg-primary hover:text-accent"
 							>
+								<Eye
+									className="h-4 w-4 transition-transform duration-300 group-hover:scale-110"
+									aria-hidden="true"
+								/>
 								Load more
 							</button>
 						</div>

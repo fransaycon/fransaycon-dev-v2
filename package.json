@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
+    "generate-lqip": "node scripts/generate-lqip.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "format": "biome format",
@@ -71,6 +72,7 @@
     "husky": "9.1.7",
     "jsdom": "29.1.1",
     "lint-staged": "17.2.0",
+    "sharp": "^0.35.3",
     "standard-version": "9.5.0",
     "typescript": "6.0.2",
     "vite": "8.0.0",
