@@ -7,7 +7,15 @@ import { defineConfig } from "vite";
 
 const config = defineConfig({
 	resolve: { tsconfigPaths: true },
-	plugins: [devtools(), netlify(), tailwindcss(), tanstackStart(), viteReact()],
+	plugins: [
+		devtools(),
+		netlify(),
+		tailwindcss(),
+		tanstackStart({
+			prerender: { enabled: true, crawlLinks: true },
+		}),
+		viteReact(),
+	],
 });
 
 export default config;
