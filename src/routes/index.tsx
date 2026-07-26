@@ -47,7 +47,7 @@ function Home() {
 					className={`mt-4 max-w-2xl text-lg text-gray-600 sm:text-xl [transition-delay:1s] ${reveal}`}
 				>
 					Building and leading enterprise products that scale for{" "}
-					{yearsOfExperience}+ years.
+					{yearsOfExperience}+ years
 				</p>
 				<ServiceColumns />
 				<WaveDivider />

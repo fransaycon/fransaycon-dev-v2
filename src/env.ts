@@ -8,9 +8,8 @@ export const env = createEnv({
 	},
 	clientPrefix: "VITE_",
 	client: {
-		// Public Web3Forms access key used by the contact form.
-		// Optional so the app still boots if it isn't configured yet.
 		VITE_WEB3FORM_ACCESS_KEY: z.string().min(1).optional(),
+		VITE_SITE_URL: z.string().url().optional(),
 	},
 	runtimeEnv: import.meta.env,
 	emptyStringAsUndefined: true,
