@@ -10,7 +10,7 @@ const stats = [
 
 export function StatsSection() {
 	return (
-		<section className="w-full bg-primary text-accent">
+		<section className="relative -mt-px w-full bg-primary text-accent">
 			<Container className="grid grid-cols-1 gap-16 py-24 md:grid-cols-2 md:items-center md:gap-24">
 				<div className="flex flex-col gap-6">
 					<h2 className="font-moon text-xl font-bold font-light sm:text-2xl">
