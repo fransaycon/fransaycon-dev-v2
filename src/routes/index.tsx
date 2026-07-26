@@ -4,7 +4,9 @@ import { Code2, PackageCheck, UsersRound } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ServiceColumns } from "#/components/services-column";
 import logoAnimation from "../animation/logo-lottie.json";
+import { Container } from "../components/container";
 import { CountUp } from "../components/count-up";
+import { ProjectsSection } from "../components/projects-section";
 import { WaveDivider } from "../components/wave-divider";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -50,7 +52,7 @@ function Home() {
 				<WaveDivider />
 			</div>
 			<section className="w-full bg-primary text-accent">
-				<div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 px-6 py-24 md:grid-cols-2 md:items-center md:gap-24">
+				<Container className="grid grid-cols-1 gap-16 py-24 md:grid-cols-2 md:items-center md:gap-24">
 					<div className="flex flex-col gap-6">
 						<h2 className="font-moon text-xl font-bold font-light sm:text-2xl">
 							Technology should accelerate your business - not slow it down
@@ -88,8 +90,9 @@ function Home() {
 							</div>
 						))}
 					</div>
-				</div>
+				</Container>
 			</section>
+			<ProjectsSection />
 		</>
 	);
 }
