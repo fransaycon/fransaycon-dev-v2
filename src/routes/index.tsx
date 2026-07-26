@@ -4,6 +4,7 @@ import { Code2, PackageCheck, UsersRound } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ServiceColumns } from "#/components/services-column";
 import logoAnimation from "../animation/logo-lottie.json";
+import { ContactSection } from "../components/contact-section";
 import { Container } from "../components/container";
 import { CountUp } from "../components/count-up";
 import { ProjectsSection } from "../components/projects-section";
@@ -14,7 +15,7 @@ export const Route = createFileRoute("/")({ component: Home });
 const yearsOfExperience = new Date().getFullYear() - 2016;
 
 const stats = [
-	{ icon: PackageCheck, value: "15+", label: "Products Developed" },
+	{ icon: PackageCheck, value: "15+", label: "Products Delivered" },
 	{ icon: Code2, value: "10+", label: "Years Building Software" },
 	{ icon: UsersRound, value: "9+", label: "Years Leading Engineering Teams" },
 ] as const;
@@ -93,6 +94,7 @@ function Home() {
 				</Container>
 			</section>
 			<ProjectsSection />
+			<ContactSection />
 		</>
 	);
 }

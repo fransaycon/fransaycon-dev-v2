@@ -1,4 +1,5 @@
 import { createEnv } from "@t3-oss/env-core";
+import { z } from "zod";
 
 export const env = createEnv({
 	server: {
@@ -7,8 +8,9 @@ export const env = createEnv({
 	},
 	clientPrefix: "VITE_",
 	client: {
-		// Add client-exposed vars here (must be prefixed VITE_), e.g.:
-		// VITE_API_URL: z.string().url(),
+		// Public Web3Forms access key used by the contact form.
+		// Optional so the app still boots if it isn't configured yet.
+		VITE_WEB3FORM_ACCESS_KEY: z.string().min(1).optional(),
 	},
 	runtimeEnv: import.meta.env,
 	emptyStringAsUndefined: true,
