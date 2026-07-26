@@ -1,7 +1,11 @@
+import { useInView } from "#/hooks/use-in-view";
+
 type ZigzagDividerProps = {
 	className?: string;
 	/** Total width of the zigzag in pixels. */
 	width?: number;
+	/** Draw duration in milliseconds. */
+	durationMs?: number;
 };
 
 const TEETH = 12;
@@ -10,12 +14,16 @@ const STROKE = 2.5;
 
 /**
  * Small decorative zigzag line used as a section separator.
- * Colored via `currentColor`, so set the text color on a wrapper.
+ * Draws itself when scrolled into view; colored via `currentColor`,
+ * so set the text color on a wrapper.
  */
 export function ZigzagDivider({
 	className = "",
 	width = 150,
+	durationMs = 900,
 }: ZigzagDividerProps) {
+	const [ref, inView] = useInView<SVGSVGElement>({ threshold: 0.6 });
+
 	const step = width / TEETH;
 	const points = Array.from({ length: TEETH + 1 }, (_, i) => {
 		const x = i * step;
@@ -26,6 +34,7 @@ export function ZigzagDivider({
 
 	return (
 		<svg
+			ref={ref}
 			className={className}
 			width={width}
 			height={AMPLITUDE + STROKE}
@@ -40,6 +49,13 @@ export function ZigzagDivider({
 				strokeWidth={STROKE}
 				strokeLinecap="round"
 				strokeLinejoin="round"
+				pathLength={1}
+				strokeDasharray={1}
+				strokeDashoffset={inView ? 0 : 1}
+				style={{
+					transition: `stroke-dashoffset ${durationMs}ms cubic-bezier(0.65, 0, 0.35, 1)`,
+				}}
+				className="motion-reduce:transition-none"
 			/>
 		</svg>
 	);
