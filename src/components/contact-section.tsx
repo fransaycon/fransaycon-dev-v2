@@ -1,6 +1,7 @@
 import { CheckCircle2, Loader2, Send } from "lucide-react";
 import { type FormEvent, useState } from "react";
 import { Container } from "#/components/container";
+import { TrustedBySection } from "#/components/trusted-by-section";
 import { ZigzagDivider } from "#/components/zigzag-divider";
 import { env } from "#/env";
 
@@ -40,9 +41,13 @@ export function ContactSection() {
 
 	return (
 		<>
-			<div className="flex justify-center py-16 text-primary">
+			<div className="flex justify-center py-8 text-primary">
 				<ZigzagDivider />
 			</div>
+
+			<TrustedBySection />
+
+			<div className="pt-16 md:pt-24" />
 
 			<section className="w-full bg-primary text-accent">
 				<Container className="grid grid-cols-1 gap-12 py-20 md:grid-cols-2 md:items-center md:gap-20 md:py-28">
