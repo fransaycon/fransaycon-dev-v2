@@ -27,8 +27,8 @@ export function TrustedBySection() {
 					Trusted by teams building great products
 				</h2>
 				<p className="mt-3 max-w-3xl text-md text-secondary/70">
-					I've had the privilege of contributing to these companies and products
-					throughout my career.
+					I've had the privilege of contributing to these companies throughout
+					my career.
 				</p>
 
 				<ul className="mt-14 flex w-full flex-wrap items-center justify-center gap-x-14 gap-y-12 sm:gap-x-20">

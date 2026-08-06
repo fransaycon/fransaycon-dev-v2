@@ -18,11 +18,24 @@ export function ProjectsSection() {
 		<section className="w-full py-24">
 			<LayoutGroup>
 				<Container>
-					<h2 className="font-moon text-2xl font-light font-bold text-primary sm:text-3xl">
-						My Projects
-					</h2>
+					<div className="max-w-3xl">
+						<h2 className="mt-3 font-moon text-3xl font-bold font-light text-primary sm:text-4xl">
+							My Projects
+						</h2>
+						<p className="mt-6 font-lora text-base leading-relaxed text-secondary/70 sm:text-rg">
+							Over the years, I've architected and delivered products across{" "}
+							<span className="font-medium text-secondary">
+								enterprise SaaS, AI, blockchain, hybrid mobile, and data
+								platforms.
+							</span>{" "}
+							Different industries, different technologies—but the same focus:{" "}
+							<span className="font-medium text-secondary">
+								turning complex ideas into reliable software that scales.
+							</span>
+						</p>
+					</div>
 
-					<div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+					<div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 						{visible.map((project) => (
 							<motion.button
 								key={project.id}
