@@ -2,6 +2,7 @@ import { Eye } from "lucide-react";
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
 import { useState } from "react";
 import { ProjectModal } from "#/components/projects/project-modal";
+import { ProjectsSeo } from "#/components/projects/projects-seo";
 import { BlurImage } from "#/components/ui/blur-image";
 import { Container } from "#/components/ui/container";
 import { type Project, projects } from "#/data/projects";
@@ -16,6 +17,7 @@ export function ProjectsSection() {
 
 	return (
 		<section className="w-full py-24">
+			<ProjectsSeo />
 			<LayoutGroup>
 				<Container>
 					<div className="max-w-3xl">

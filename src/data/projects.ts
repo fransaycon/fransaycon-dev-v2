@@ -63,7 +63,7 @@ export const projects: Project[] = [
 		blur: lqip.terms,
 		preview: "from-sky-500 to-indigo-600",
 		productContext:
-			"A private credit origination platform that streamlines borrower onboarding, credit assessment, and deal execution for private lenders.",
+			"An AI-powered private credit origination platform that streamlines borrower onboarding, credit assessment, and deal execution for private lenders.",
 		engineeringChallenges:
 			"Built a scalable multi-tenant platform with strict tenant isolation, AI automations, balancing security, maintainability, and rapid product evolution.",
 		contributions: [
